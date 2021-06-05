@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html-iso8601" table-class="display nowrap" order="8">
+
+<css lib="datatables searchbuilder datetime"/>
+
+<js lib="jquery datatables searchbuilder datetime">
+<![CDATA[
+
+$(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Qlfrtip',
+        searchBuilder: {
+            columns: [1,2,3]
+        }
+    });
+});
+
+]]>
+</js>
+
+<title lib="SearchBuilder">Only allow filtering on certain columns</title>
+
+<info><![CDATA[
+
+This example demonstrates the behaviour of `-init searchBuilder` when the `-init searchBuilder.columns` is set to limit which columns can be filtered on. It is an array of the type `-type column-selector`, allowing a wide range of different ways of selecting columns.
+
+Notice in this example that the "Data" select element only has 3 columns to choose from.
+
+]]></info>
+
+</dt-example>

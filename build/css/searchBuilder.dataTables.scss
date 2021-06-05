@@ -1,0 +1,124 @@
+@import './common.scss';
+
+$border-width: 1px;
+$dtb-button-colour: rgba(0, 0, 0, 0.1) !default;
+$dtb-button-border: 1px solid dtb-shade(transparent, 30%) !default;
+
+div.dtsb-searchBuilder {
+    button, select, input {
+        background-color: #f9f9f9;
+    }
+
+    button.dtsb-button {
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 0.5em 1em;
+        border: $dtb-button-border;
+        border-radius: 2px;
+        cursor: pointer;
+        font-size: 0.88em;
+        line-height: 1.6em;
+        color: black;
+        //box-shadow: 1px 1px 3px #ccc;
+        white-space: nowrap;
+        overflow: hidden;
+        @include dtb-two-stop-gradient(
+            to bottom,
+            lighten($dtb-button-colour, 90%),
+            $dtb-button-colour
+        );
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-decoration: none;
+        outline: none;
+        text-overflow: ellipsis;
+
+        &:hover {
+            background-color: #cecece !important;
+            cursor: pointer;
+        }
+    }
+
+    div.dtsb-logicContainer {
+        border: $dtb-button-border;
+        @include dtb-two-stop-gradient(
+            to right,
+            lighten($dtb-button-colour, 90%),
+            $dtb-button-colour
+        );
+
+        button {
+            border: 1px solid transparent;
+            background: transparent;
+        }
+    }
+
+    button.dtsb-clearGroup {
+        min-width: 2em;
+        padding: 0;
+    }
+
+    button.dtsb-iptbtn {
+        min-width: 100px;
+        text-align: left;
+    }
+
+    div.dtsb-group {
+        div.dtsb-logicContainer{
+            border: $border-width solid;
+            border-color: #cecece;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+            align-items: flex-start;
+
+            button.dtsb-logic {
+                border: none;
+                border-radius: 0px;
+                flex-grow: 1;
+                flex-shrink: 0;
+                flex-basis: 3em;
+                margin: 0px;
+            }
+    
+            button.dtsb-clearGroup {
+                border: none;
+                border-radius: 0px;
+                width: 2em;
+                margin: 0px;
+            }
+        }
+
+        div.dtsb-criteria {
+            select.dtsb-dropDown, input.dtsb-input{
+                border: $border-width solid;
+                border-radius: 3px;
+            }
+
+            select.dtsb-condition {
+                border-color: #48b13c;
+            }
+
+            select.dtsb-data {
+                border-color: #e70f00;
+            }
+
+            select.dtsb-value, input.dtsb-value {
+                border-color: #0069ba;
+            }
+
+            select.dtsb-condition, select.dtsb-data, select.dtsb-value {
+                option.dtsb-option {
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+

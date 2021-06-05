@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html-iso8601" table-class="display nowrap" order="11">
+
+<css lib="datatables searchbuilder datetime"/>
+
+<js lib="jquery datatables searchbuilder datetime">
+<![CDATA[
+
+$(document).ready( function () {
+  var table = $('#example').DataTable({
+    dom: 'Qlfrtip',
+    columnDefs: [{
+      targets: 0,
+      render: function(data, type, row, meta) {
+        return type === 'display'? 'Employee: ' + data : data;
+      }
+    }]
+  });
+} );
+
+
+]]>
+</js>
+
+<title lib="SearchBuilder">Interaction with Rendered Cells</title>
+
+<info><![CDATA[
+
+This example shows how SearchBuilder interacts with cells rendered with `-init columns.render`. SearchBuilder uses the values returned from type `display` for any conditions that use select elements, otherwise the `filter` type will be used. This means that select elements will display the same values that are shown in the table.
+
+]]></info>
+
+</dt-example>

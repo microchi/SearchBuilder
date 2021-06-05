@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html-salary" table-class="display nowrap" order="1">
+
+<css lib="datatables searchbuilder datetime">
+    .old {
+        color: red;
+    }
+    .middleaged {
+        color: blue;
+    }
+    .young {
+        color: green;
+    }
+</css>
+
+<js lib="jquery datatables searchbuilder datetime">
+<![CDATA[
+
+$(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Qlfrtip'
+    });
+});
+
+]]>
+</js>
+
+<title lib="SearchBuilder">HTML Format</title>
+
+<info><![CDATA[
+
+This example shows the behaviour of SearchBuilder with columns of type `html` which is present in the age column.
+
+]]></info>
+
+</dt-example>

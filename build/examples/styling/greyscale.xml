@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html-iso8601" table-class="display nowrap" order="1">
+
+<css lib="datatables searchbuilder datetime"/>
+
+<js lib="jquery datatables searchbuilder datetime">
+<![CDATA[
+
+$(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Qlfrtip',
+        searchBuilder: {
+            greyscale: true
+        }
+    });
+});
+
+]]>
+</js>
+
+<title lib="SearchBuilder">GreyScale</title>
+
+<info><![CDATA[
+
+This example demonstrates how to make the `-init searchBuilder` styling turn to greyscale as an alternative to showing the colours around the select and input elements.
+]]></info>
+
+</dt-example>

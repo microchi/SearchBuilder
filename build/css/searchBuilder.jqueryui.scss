@@ -1,0 +1,55 @@
+@import './common.scss';
+
+div.dtsb-searchBuilder {
+    div.dtsb-group{
+        div.dtsb-criteria{
+            select{
+                width: auto !important;
+            }
+
+            select.dtsb-condition {
+                border-color: #48b13c;
+            }
+
+            select.dtsb-data {
+                border-color: #e70f00;
+            }
+
+            select.dtsb-value, input.dtsb-value {
+                border-color: #0069ba;
+            }
+        }
+
+        button.dtsb-button {
+            min-width: 2em;
+        }
+
+        div.dtsb-logicContainer{
+            border-radius: 3px;
+            border: solid 1px #c5c5c5;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+            align-items: flex-start;
+            margin-top: 10px;
+
+            button.dtsb-logic {
+                border: none;
+                border-radius: 0px;
+                flex-grow: 1;
+                flex-shrink: 0;
+                flex-basis: 3em;
+                margin: 0px;
+            }
+    
+            button.dtsb-clearGroup {
+                border: none;
+                border-radius: 0px;
+                width: 2em;
+                margin: 0px;
+            }
+        }
+    }
+}

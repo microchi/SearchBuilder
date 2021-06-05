@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html-iso8601" table-class="display nowrap" order="5">
+
+<css lib="datatables searchbuilder datetime"/>
+
+<js lib="jquery datatables searchbuilder datetime">
+<![CDATA[
+
+$(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Qlfrtip',
+        searchBuilder: {
+            logic: 'OR'
+        }
+    });
+});
+
+]]>
+</js>
+
+<title lib="SearchBuilder">Default Logic</title>
+
+<info><![CDATA[
+
+This example demonstrates `-init searchBuilder` when the `-init searchBuilder.logic` option over-rides the default logic used for groups upon initialisation. As the default is `AND` logic, in this example `OR` logic will be the default.
+
+]]></info>
+
+</dt-example>

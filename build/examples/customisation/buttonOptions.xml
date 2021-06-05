@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" table-class="display nowrap" order="5">
+
+<css lib="datatables searchbuilder buttons datetime"/>
+
+<js lib="jquery datatables searchbuilder buttons datetime">
+<![CDATA[
+
+$(document).ready(function() {
+    $('#example').DataTable( {
+        buttons:[
+            {
+                extend: 'searchBuilder',
+                config: {
+                    depthLimit: 2
+                }
+            }
+        ],
+        dom: 'Bfrtip',
+    });
+});
+
+]]>
+</js>
+
+<title lib="SearchBuilder">SearchBuilder Configuration with Buttons</title>
+
+<info><![CDATA[
+
+This example demonstrates the behaviour of `-init searchBuilder` when initialised using a button.
+
+When initialising using a button the config is set using the `buttons.buttons.config` property. This can then be used to set SearchBuilder options such as `-init searchBuilder.depthLimit`.
+
+]]></info>
+
+</dt-example>

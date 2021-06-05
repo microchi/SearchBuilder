@@ -1,0 +1,125 @@
+
+@function dtb-tint( $color, $percent ) {
+	@return mix(white, $color, $percent);
+}
+
+@function dtb-shade( $color, $percent ) {
+	@return mix(black, $color, $percent);
+}
+
+$border-width: 1px;
+
+@mixin dtb-two-stop-gradient($direction, $fromColor, $toColor) {
+	background-color: $toColor; /* Fallback */
+	background: linear-gradient($direction, $fromColor 0%, $toColor 100%);
+}
+
+div.dt-button-collection {
+    overflow: visible !important;
+
+    div.dtsb-searchBuilder {
+        width: 100% !important;
+    }
+}
+
+.dtsb-greyscale {
+    border: $border-width solid #cecece !important;
+}
+
+div.dtsb-logicContainer {
+    .dtsb-greyscale {
+        border: none !important;
+    }
+}
+
+div.dtsb-searchBuilder {
+    justify-content: space-evenly;
+    cursor: default;
+    margin-bottom: 1em;
+    text-align: left;
+
+    button.dtsb-button,
+    select {
+        font-size: 1em;
+    }
+
+    div.dtsb-titleRow {
+        justify-content: space-evenly;
+        margin-bottom: 0.5em;
+    
+        div.dtsb-title {
+            display: inline-block;
+            padding-top: 6px;
+        }
+
+        button.dtsb-clearAll {
+            float: right;
+            margin-bottom: 0.333em;
+        }
+    }
+
+    div.dtsb-vertical {
+        .dtsb-value, .dtsb-data, .dtsb-condition {
+            display: block;
+        }
+    }
+
+    div.dtsb-group {
+        position: relative;
+        clear: both;
+        margin-bottom: 0.8em;
+
+        button.dtsb-clearGroup {
+            margin: 2px;
+            text-align: center;
+            padding: 0;
+        }
+
+        div.dtsb-logicContainer {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            position: absolute;
+            margin-top: 0.8em;
+            margin-right: 0.8em;
+        }
+
+        div.dtsb-criteria {
+            margin-bottom: 0.8em;
+
+            select.dtsb-dropDown,
+            input.dtsb-input{
+                padding: 0.4em;
+                margin-right: 0.8em;
+                max-width: 20em;
+
+                option.dtsb-notItalic {
+                    font-style: normal;
+                }
+            }
+
+            select.dtsb-italic{
+                font-style: italic;
+            }
+
+            div.dtsb-buttonContainer {
+                float: right;
+                display: inline-block;
+
+                button.dtsb-delete, button.dtsb-right, button.dtsb-left{
+                    margin-right: 0.8em;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            span.dtsp-joiner {
+                margin-right: 0.8em;
+            }
+        }
+    }
+}

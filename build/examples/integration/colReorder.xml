@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html-iso8601" table-class="display nowrap" order="2">
+
+<css lib="datatables searchbuilder colreorder datetime"/>
+
+<js lib="jquery datatables searchbuilder colreorder datetime">
+<![CDATA[
+
+$(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Qlfrtip',
+        colReorder: true
+    });
+});
+
+]]>
+</js>
+
+<title lib="SearchBuilder">ColReorder Integration</title>
+
+<info><![CDATA[
+
+This example demonstrates the behaviour of `-init searchBuilder` when ColReorder is enabled using `-init colReorder`.
+
+ColReorder adds the ability for the end user to be able to reorder columns in a DataTable through a click and drag operation. This can be useful when presenting data in a table, letting the user move columns that they wish to compare next to each other for easier comparison.
+
+]]></info>
+
+</dt-example>
